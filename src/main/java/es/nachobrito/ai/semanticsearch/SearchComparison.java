@@ -21,9 +21,12 @@ import es.nachobrito.ai.semanticsearch.infrastructure.langchain4j.SemanticTextSe
 import es.nachobrito.ai.semanticsearch.infrastructure.lucene.LuceneTextSearch;
 import java.util.List;
 
-/** Hello world! */
-public class App {
+public class SearchComparison {
   public static void main(String[] args) {
+    if (args.length != 1) {
+      System.out.println("Usage: SemanticSearchToolbox <query>");
+      System.exit(1);
+    }
     List<? extends TextSearch> searchers =
         List.of(new LuceneTextSearch(), new SemanticTextSearch());
 
@@ -36,7 +39,7 @@ public class App {
             "Which crop is best for sandy soil?",
             "Is there a difference between four-wheel drive and all-wheel drive?");
 
-    var query = "We want to avoid insects";
+    var query = args[0];
     System.out.printf("\nCandidates for query \"%s\"\n\n", query);
     for (TextSearch searcher : searchers) {
       System.out.printf("Searching with \"%s\"\n", searcher.getClass().getSimpleName());
