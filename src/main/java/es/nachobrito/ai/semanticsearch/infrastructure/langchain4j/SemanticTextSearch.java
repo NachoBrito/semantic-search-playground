@@ -22,7 +22,6 @@ import dev.langchain4j.model.embedding.onnx.bgesmallenv15.BgeSmallEnV15Embedding
 import dev.langchain4j.store.embedding.CosineSimilarity;
 import es.nachobrito.ai.semanticsearch.domain.TextSearch;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -33,7 +32,6 @@ import java.util.stream.Collectors;
  */
 public class SemanticTextSearch implements TextSearch {
   private EmbeddingModel embeddingModel;
-  private final Map<String, Embedding> embeddings = new HashMap<>();
 
   public SemanticTextSearch() {
     getEmbeddingModel();

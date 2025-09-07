@@ -24,11 +24,10 @@ import java.util.List;
 public class SearchComparison {
   public static void main(String[] args) {
     if (args.length != 1) {
-      System.out.println("Usage: SemanticSearchToolbox <query>");
+      System.out.println("Usage: SearchComparison <query>");
       System.exit(1);
     }
-    List<? extends TextSearch> searchers =
-        List.of(new LuceneTextSearch(), new SemanticTextSearch());
+    var searchers = List.of(new LuceneTextSearch(), new SemanticTextSearch());
 
     var candidates =
         List.of(
