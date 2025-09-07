@@ -1,7 +1,7 @@
 # Semantic Search playground
 
 This project is a simple tool to compare results of keyword based search and semantic search. It is the companion code
-of my article ["How Semantic Search Works"](https://www.nachobrito.es/software-engineering/semantic-search/).
+of my article ["How Semantic Search Works"](https://www.nachobrito.es/artificial-intelligence/semantic-search/).
 
 This tool will accept a query string as parameter, and perform a search among a list of candidate strings using both a
 keyword based search (powered by [Lucene](https://lucene.apache.org/core/)) and a semantic search, powered by
